@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{9C785291-D4E7-4577-BD45-5ECB56256BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDB.Server", "DynamicDB.Server\DynamicDB.Server.csproj", "{B50289F7-D6A1-4C8B-B6F4-94AB51641FF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDB.Client", "DynamicDB.Client\DynamicDB.Client.csproj", "{B71765A1-4696-4F82-993F-39EDFE72D6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDB.Core", "DynamicDB.Core\DynamicDB.Core.csproj", "{CD749101-76F6-46F4-90C3-09F637D6E5CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C785291-D4E7-4577-BD45-5ECB56256BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C785291-D4E7-4577-BD45-5ECB56256BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C785291-D4E7-4577-BD45-5ECB56256BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C785291-D4E7-4577-BD45-5ECB56256BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50289F7-D6A1-4C8B-B6F4-94AB51641FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50289F7-D6A1-4C8B-B6F4-94AB51641FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50289F7-D6A1-4C8B-B6F4-94AB51641FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50289F7-D6A1-4C8B-B6F4-94AB51641FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71765A1-4696-4F82-993F-39EDFE72D6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71765A1-4696-4F82-993F-39EDFE72D6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71765A1-4696-4F82-993F-39EDFE72D6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71765A1-4696-4F82-993F-39EDFE72D6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD749101-76F6-46F4-90C3-09F637D6E5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD749101-76F6-46F4-90C3-09F637D6E5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD749101-76F6-46F4-90C3-09F637D6E5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD749101-76F6-46F4-90C3-09F637D6E5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DynamicDBService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDynamicDBService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDynamicDBService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Lock_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lock" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Lock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Unlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:Unlock" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Unlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Get_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Get_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_LoadAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAll" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_LoadAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Query_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Query_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_ExecuteNonQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_ExecuteNonQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Execute_InputMessage">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Execute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProcedure" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropProcedure" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_ExecuteProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteProcedure" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_ExecuteProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCollection" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_CreateCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropCollection" />
+  </wsdl:message>
+  <wsdl:message name="IDynamicDBService_DropCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropCollectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDynamicDBService">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Insert" message="tns:IDynamicDBService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/InsertResponse" message="tns:IDynamicDBService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Update" message="tns:IDynamicDBService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/UpdateResponse" message="tns:IDynamicDBService_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Delete" message="tns:IDynamicDBService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/DeleteResponse" message="tns:IDynamicDBService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Lock" message="tns:IDynamicDBService_Lock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/LockResponse" message="tns:IDynamicDBService_Lock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Unlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Unlock" message="tns:IDynamicDBService_Unlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/UnlockResponse" message="tns:IDynamicDBService_Unlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Get" message="tns:IDynamicDBService_Get_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/GetResponse" message="tns:IDynamicDBService_Get_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/LoadAll" message="tns:IDynamicDBService_LoadAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/LoadAllResponse" message="tns:IDynamicDBService_LoadAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Query" message="tns:IDynamicDBService_Query_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/QueryResponse" message="tns:IDynamicDBService_Query_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/ExecuteNonQuery" message="tns:IDynamicDBService_ExecuteNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/ExecuteNonQueryResponse" message="tns:IDynamicDBService_ExecuteNonQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Execute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Execute" message="tns:IDynamicDBService_Execute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/ExecuteResponse" message="tns:IDynamicDBService_Execute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/CreateProcedure" message="tns:IDynamicDBService_CreateProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/CreateProcedureResponse" message="tns:IDynamicDBService_CreateProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/DropProcedure" message="tns:IDynamicDBService_DropProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/DropProcedureResponse" message="tns:IDynamicDBService_DropProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/ExecuteProcedure" message="tns:IDynamicDBService_ExecuteProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/ExecuteProcedureResponse" message="tns:IDynamicDBService_ExecuteProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/CreateDatabase" message="tns:IDynamicDBService_CreateDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/CreateDatabaseResponse" message="tns:IDynamicDBService_CreateDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/DropDatabase" message="tns:IDynamicDBService_DropDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/DropDatabaseResponse" message="tns:IDynamicDBService_DropDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/Save" message="tns:IDynamicDBService_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/SaveResponse" message="tns:IDynamicDBService_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/CreateCollection" message="tns:IDynamicDBService_CreateCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/CreateCollectionResponse" message="tns:IDynamicDBService_CreateCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDynamicDBService/DropCollection" message="tns:IDynamicDBService_DropCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDynamicDBService/DropCollectionResponse" message="tns:IDynamicDBService_DropCollection_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IDynamicDBService" type="tns:IDynamicDBService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDynamicDBService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Insert">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lock">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Lock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unlock">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Unlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAll">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/LoadAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Execute">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProcedure">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/CreateProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropProcedure">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/DropProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteProcedure">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/ExecuteProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDatabase">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/CreateDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDatabase">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/DropDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/Save" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCollection">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/CreateCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropCollection">
+      <soap12:operation soapAction="http://tempuri.org/IDynamicDBService/DropCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DynamicDBService">
+    <wsdl:port name="NetTcpBinding_IDynamicDBService" binding="tns:NetTcpBinding_IDynamicDBService">
+      <soap12:address location="net.tcp://localhost:8733/Design_Time_Addresses/DynamicDB/DynamicDBService/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8733/Design_Time_Addresses/DynamicDB/DynamicDBService/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
